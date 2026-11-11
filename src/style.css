@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  /* 间距 8pt grid */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
+  /* 字阶 */
+  --fs-xs: 14px; --fs-sm: 15px; --fs-md: 16px;
+  --fs-lg: 18px; --fs-xl: 22px; --fs-2xl: 28px;
+  --fw-normal: 400; --fw-medium: 500; --fw-semibold: 600;
+  /* 圆角 / 阴影 / 过渡 */
+  --radius-sm: 4px; --radius: 8px; --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow: 0 2px 8px rgb(0 0 0 / 0.35);
+  --shadow-lg: 0 8px 24px rgb(0 0 0 / 0.45);
+  --t-fast: 0.15s; --t: 0.2s;
+  /* 颜色：深色编辑器，中性为主，主色稀有 */
+  --bg-app: #0f172a;
+  --bg-panel: #1e293b;
+  --bg-raised: #273449;
+  --bg-hover: #334155;
+  --border: #334155;
+  --text-1: #f1f5f9;
+  --text-2: #94a3b8;
+  --text-3: #64748b;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --danger: #f87171;
+  --warn: #fbbf24;
+}
+
+html, body, #app { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg-app);
+  color: var(--text-1);
+  font-size: var(--fs-xs);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+* { box-sizing: border-box; }
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background var(--t-fast), color var(--t-fast), opacity var(--t-fast);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: var(--radius-sm); }
+::-webkit-scrollbar-track { background: transparent; }
